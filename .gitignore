@@ -1,0 +1,6 @@
+*
+!.gitignore
+!.aliases
+!bin
+bin/*
+!bin/fut

@@ -1,0 +1,32 @@
+alias ls='ls --color=auto'
+alias l='ls -l'
+alias la='ls -la'
+alias lrt='ls -lrt'
+alias lrtail='ls -lrt|tail'
+alias ff='find . -name'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+alias d=docker
+alias cx='chmod +x'
+alias apt-get='sudo apt-get'
+
+alias gs='git show'
+alias gg='git grep'
+alias gd='git diff'
+alias gst='git status'
+alias grc='git rebase --continue'
+alias gra='git rebase --abort'
+alias grs='git rebase --skip'
+
+alias hu='setxkbmap hu'
+alias us='setxkbmap us'
+
+# local overrides
+if [[ -f .aliases.local ]]
+then
+    source .aliases.local
+fi
