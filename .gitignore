@@ -1,6 +1,7 @@
 *
 !.gitignore
 !.aliases
+!.vimrc
 !bin
 bin/*
 !bin/fut
