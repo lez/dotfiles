@@ -42,3 +42,4 @@ fi
 
 alias pss='pacman -Ss'
 alias pS='sudo pacman -S'
+alias .='source'
