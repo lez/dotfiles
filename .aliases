@@ -1,6 +1,8 @@
 alias ls='ls --color=auto'
 alias l='ls -l'
 alias la='ls -la'
+alias lah='ls -lah'
+alias lh='ls -lh'
 alias lrt='ls -lrt'
 alias lrtail='ls -lrt|tail'
 alias ff='find . -name'
@@ -10,12 +12,19 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
+alias grepi='grep -i'
+alias grepw='grep -w'
+alias grepwi='grep -wi'
+alias grepiw='grep -wi'
+
 alias d=docker
 alias cx='chmod +x'
 alias apt-get='sudo apt-get'
+alias sctl='sudo systemctl'
 
 alias gs='git show'
 alias gg='git grep'
+alias ggi='git grep -i'
 alias gd='git diff'
 alias gst='git status'
 alias grc='git rebase --continue'
@@ -26,7 +35,10 @@ alias hu='setxkbmap hu'
 alias us='setxkbmap us'
 
 # local overrides
-if [[ -f .aliases.local ]]
+if [[ -f ~/.aliases.local ]]
 then
-    source .aliases.local
+    source ~/.aliases.local
 fi
+
+alias pss='pacman -Ss'
+alias pS='sudo pacman -S'
