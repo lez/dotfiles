@@ -17,5 +17,8 @@ set nobackup
 " but it's default
 set ruler
 
+set cursorline
+set background=dark
 
+set tags=./tags,../tags,../../tags,../../../tags,../../../../tags
 syntax on
