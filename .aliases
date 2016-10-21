@@ -22,6 +22,7 @@ alias cx='chmod +x'
 alias apt-get='sudo apt-get'
 alias sctl='sudo systemctl'
 
+alias ga='git add'
 alias gs='git show'
 alias gg='git grep'
 alias ggi='git grep -i'
