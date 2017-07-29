@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euo pipefail
+
+if setxkbmap -query | grep layout | grep -wq us
+then
+    setxkbmap hu
+else
+    setxkbmap us
+fi

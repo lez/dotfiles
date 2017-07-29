@@ -1,8 +1,11 @@
 *
-!.gitignore
 !.aliases
+!.gitignore
 !.vimrc
+!.xbindkeysrc
+!.xinitrc
 !bin
 bin/*
 !bin/fut
 !bin/waitfile
+!bin/change_keyboard_layout
