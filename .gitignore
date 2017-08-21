@@ -4,6 +4,8 @@
 !.vimrc
 !.xbindkeysrc
 !.xinitrc
+!.zshoptions
+!.zshenv
 !bin
 bin/*
 !bin/fut

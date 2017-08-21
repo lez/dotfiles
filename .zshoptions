@@ -1,0 +1,19 @@
+# do not correct anything
+setopt NOCORRECT NOCORRECTALL
+
+# export all variables automatically
+setopt ALLEXPORT
+
+# I want to write: $ #ls -l
+setopt interactivecomments
+
+# ls a*<tab> will give a menu of files starting with 'a'
+setopt glob_complete
+
+# immediately come up with the menu, dont wait for the next tab press
+setopt menucomplete
+
+# alt+. insert last line's last word (a'la bash)
+bindkey "^[." insert-last-word
+
+bindkey "^Q" push-input
