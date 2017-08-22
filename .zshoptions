@@ -16,4 +16,6 @@ setopt menucomplete
 # alt+. insert last line's last word (a'la bash)
 bindkey "^[." insert-last-word
 
+# realized you forgot to run a short command before typing a long one?
+# Ctrl-Q will push the long one to the stack, then after executing the short command, the long one reappears automatically
 bindkey "^Q" push-input
