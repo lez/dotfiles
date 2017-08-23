@@ -1,4 +1,6 @@
 #!/bin/bash
+# switch between 'us' and 'hu' keyboard layout
+
 set -euo pipefail
 
 if setxkbmap -query | grep layout | grep -wq us
