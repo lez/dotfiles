@@ -6,6 +6,8 @@
 !.xinitrc
 !.zshoptions
 !.zshenv
+!.zshrc
+!.zshfunc
 !bin
 bin/*
 !bin/fut

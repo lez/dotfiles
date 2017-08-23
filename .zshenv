@@ -1,4 +1,4 @@
-export PATH=/home/lez/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH=$HOME/bin:$PATH
 export PS1="$PS1%{$fg_bold[yellow]%}⚡%{$reset_color%} "
 export PAGER="less"
 export EDITOR=vim

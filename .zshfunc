@@ -1,0 +1,57 @@
+function v {
+    VIM_FILENAME=$(cut -d":" -f1 <<< "$1")
+    VIM_LINE_NUMBER=$(cut -d":" -f2 <<< "$1")
+    if ! [[ $VIM_LINE_NUMBER =~ '^[0-9]+$' ]]; then   # checking if line number is really a number
+        VIM_LINE_NUMBER=""
+    fi
+
+    # cut leading a/ or b/, as pasted from a diff output
+    if [ ${#VIM_FILENAME} -gt 2 ] && [ ! -f "$VIM_FILENAME" ] && [ -f "${VIM_FILENAME:2}" ]; then
+        VIM_FILENAME="${VIM_FILENAME:2}"
+    fi
+
+    # ${*:2} is an array of parameters starting from $2
+    if [ -z "$VIM_LINE_NUMBER" ]; then
+        vim "$VIM_FILENAME" ${*:2}
+    else
+        vim "$VIM_FILENAME" +$VIM_LINE_NUMBER ${*:2}
+    fi
+}
+
+function vv {
+    FILE_PATH=$(find . -name $1)
+    if [ -n "$FILE_PATH" ]
+    then
+        vim "$FILE_PATH"
+    else
+        echo "$1: not found"
+    fi
+}
+
+function rgr {
+    grep -r $1 * 2>/dev/null
+}
+
+function _ff {
+    find . -name $1*
+}
+
+function _ffi {
+    find . -iname $1*
+}
+
+function vff {
+    file=$(find . -name $1* | head -1)
+    echo Opening $file...
+    vim $file
+}
+
+function vfff {
+    file=$(find . -name $1 | head -1)
+    echo Opening $file...
+    vim $file
+}
+
+if [[ -f .zshfunc.local ]]; then
+    source .zshfunc.local
+fi
