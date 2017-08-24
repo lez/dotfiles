@@ -1,5 +1,4 @@
 export PATH=$HOME/bin:$PATH
-export PS1="$PS1%{$fg_bold[yellow]%}⚡%{$reset_color%} "
 export PAGER="less"
 export EDITOR=vim
 export MAKEFLAGS="-j4"
