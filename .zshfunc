@@ -19,7 +19,7 @@ function v {
 }
 
 function vv {
-    FILE_PATH=$(find . -name $1)
+    FILE_PATH=$(find . -name $1 2>/dev/null)
     if [ -n "$FILE_PATH" ]
     then
         vim "$FILE_PATH"
@@ -33,21 +33,29 @@ function rgr {
 }
 
 function _ff {
-    find . -name $1*
+    find . -name $1* 2>/dev/null
 }
 
 function _ffi {
-    find . -iname $1*
+    find . -iname $1* 2>/dev/null
 }
 
 function vff {
-    file=$(find . -name $1* | head -1)
+    file=$(find . -name $1* 2>/dev/null | head -1)
+    if [[ -z $file ]]; then
+        echo vff: $1: not found
+        return
+    fi
     echo Opening $file...
     vim $file
 }
 
 function vfff {
-    file=$(find . -name $1 | head -1)
+    file=$(find . -name $1 2>/dev/null | head -1)
+    if [[ -z $file ]]; then
+        echo vfff: $1: not found
+        return
+    fi
     echo Opening $file...
     vim $file
 }
