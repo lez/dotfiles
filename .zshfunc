@@ -36,8 +36,16 @@ function _ff {
     find . -name $1* 2>/dev/null
 }
 
+function _fff {
+    find . -name $1 2>/dev/null
+}
+
 function _ffi {
     find . -iname $1* 2>/dev/null
+}
+
+function _fffi {
+    find . -iname $1 2>/dev/null
 }
 
 function vff {
