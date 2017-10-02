@@ -56,7 +56,7 @@ alias ss='sudo systemctl'
 alias hu='setxkbmap hu'
 alias us='setxkbmap us'
 alias youtube-dl-mp3='youtube-dl -x --audio-format=mp3'
-alias mynotifywait='inotifywait -r -e modify,attrib,delete,create,move --exclude .git\|.idea'
+alias mynotifywait='inotifywait -r -e modify,attrib,delete,create,move --exclude "/\.git/|/\.idea/"'
 
 # git
 alias 'gc!'='git commit -v --amend'
