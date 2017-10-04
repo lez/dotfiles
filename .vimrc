@@ -36,3 +36,6 @@ command! WQ :wq
 command! Wqall :wqall
 command! WQall :wqall
 command! WQAll :wqall
+
+inoremap <F2> <c-o>:w<cr>
+noremap <F2> :w<cr>
