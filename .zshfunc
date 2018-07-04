@@ -1,5 +1,17 @@
 function v {
-    VIM_FILENAME=$(cut -d":" -f1 <<< "$1")
+    local FILENAME_INPUT
+    local VIM_FILENAME
+    local VIM_LINE_NUMBER
+
+    if [[ $# = 0 ]]; then
+        FILENAME_INPUT=$(xclip -out | head -1 | tr --delete '\n')
+        echo "Clipboard input: $FILENAME_INPUT"
+    else
+        FILENAME_INPUT="$1"
+    fi
+
+    VIM_FILENAME=$(cut -d":" -f1 <<< "$FILENAME_INPUT")
+
     VIM_LINE_NUMBER=$(cut -d":" -f2 <<< "$1")
     if ! [[ $VIM_LINE_NUMBER =~ '^[0-9]+$' ]]; then   # checking if line number is really a number
         VIM_LINE_NUMBER=""
