@@ -196,3 +196,4 @@ if [[ -f ~/.aliases.local ]]
 then
     source ~/.aliases.local
 fi
+alias tilos='mplayer http://stream.tilos.hu/tilos'

@@ -1,0 +1,11 @@
+[cola]
+    spellcheck = false
+
+[user]
+    email = lez@github.com
+    name = Laszlo Megyer
+
+[alias]
+    cor = checkout --recurse-submodules
+    co = checkout
+    cp = cherry-pick
