@@ -11,5 +11,4 @@
 #
 
 "/home/lez/bin/change_keyboard_layout"
-    m:0x15 + c:62
     Control+Shift+Mod2 + Shift_R
