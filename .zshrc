@@ -33,6 +33,9 @@ setopt hist_expire_dups_first
 setopt hist_ignore_space
 setopt hist_allow_clobber
 
+# rehash automatically before autocompletion
+zstyle ':completion:*' rehash true
+
 source ~/.zshoptions
 source ~/.zshenv
 source ~/.aliases
