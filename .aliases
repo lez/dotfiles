@@ -59,6 +59,8 @@ alias youtube-dl-mp3='youtube-dl -x --audio-format=mp3'
 alias mynotifywait='inotifywait -r -e modify,attrib,delete,create,move --exclude "/\.git/|/\.idea/|/\..*\.sw[opx]+$"'
 alias scp='noglob scp'
 alias my-refresh-firefox='CURR=$(xdotool getactivewindow); xdotool windowactivate $(xdotool search --name "Mozilla Firefox" | tail -1); xdotool key F5; xdotool windowactivate $CURR'
+alias dfh='df -h'
+alias dush='du -sh'
 
 # git
 alias 'gc!'='git commit -v --amend'
