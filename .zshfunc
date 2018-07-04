@@ -80,6 +80,16 @@ function vfff {
     vim $file
 }
 
+# insert 'sudo ' at the beginning of the line
+function prepend-sudo {
+  if [[ "$BUFFER" != su(do|)\ * ]]; then
+    BUFFER="sudo $BUFFER"
+    (( CURSOR += 5 ))
+  fi
+}
+zle -N prepend-sudo
+
+
 if [[ -f .zshfunc.local ]]; then
     source .zshfunc.local
 fi
