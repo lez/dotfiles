@@ -5,6 +5,6 @@ export MAKEFLAGS="-j4"
 export GIT_DIFF=diffuse
 export GIT_PAGER="less -FX"
 
-if [[ -f .zshenv.local ]]; then
-    source .zshenv.local
+if [[ -f ~/.zshenv.local ]]; then
+    source ~/.zshenv.local
 fi
