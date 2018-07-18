@@ -1,0 +1,9 @@
+[cola]
+	spellcheck = false
+
+[user]
+	email = lez@github.com
+	name = Laszlo Megyer
+
+[alias]
+    co = checkout --recurse-submodules
