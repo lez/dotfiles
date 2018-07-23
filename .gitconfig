@@ -7,3 +7,4 @@
 
 [alias]
     co = checkout --recurse-submodules
+    cp = cherry-pick
