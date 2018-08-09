@@ -90,6 +90,6 @@ function prepend-sudo {
 zle -N prepend-sudo
 
 
-if [[ -f .zshfunc.local ]]; then
-    source .zshfunc.local
+if [[ -f ~/.zshfunc.local ]]; then
+    source ~/.zshfunc.local
 fi
