@@ -6,5 +6,6 @@
 	name = Laszlo Megyer
 
 [alias]
-    co = checkout --recurse-submodules
+    cor = checkout --recurse-submodules
+    co = checkout
     cp = cherry-pick
