@@ -44,24 +44,32 @@ function rgr {
     grep -r $1 * 2>/dev/null
 }
 
+function __ffexcludes {
+    if [[ -f .ffexcludes ]]; then
+        for dir in $(cat .ffexcludes); do
+            echo -n " -not ( -path $dir -prune )"
+        done
+    fi
+}
+
 function _ff {
-    find . -name $1* 2>/dev/null
+    find . $(__ffexcludes) -name $1* 2>/dev/null
 }
 
 function _fff {
-    find . -name $1 2>/dev/null
+    find . $(__ffexcludes) -name $1 2>/dev/null
 }
 
 function _ffi {
-    find . -iname $1* 2>/dev/null
+    find . $(__ffexcludes) -iname $1* 2>/dev/null
 }
 
 function _fffi {
-    find . -iname $1 2>/dev/null
+    find . $(__ffexcludes) -iname $1 2>/dev/null
 }
 
 function vff {
-    file=$(find . -name $1* 2>/dev/null | head -1)
+    file=$(find . $(__ffexcludes) -name $1* 2>/dev/null | head -1)
     if [[ -z $file ]]; then
         echo vff: $1: not found
         return
@@ -71,7 +79,7 @@ function vff {
 }
 
 function vfff {
-    file=$(find . -name $1 2>/dev/null | head -1)
+    file=$(find . $(__ffexcludes) -name $1 2>/dev/null | head -1)
     if [[ -z $file ]]; then
         echo vfff: $1: not found
         return
