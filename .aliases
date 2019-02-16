@@ -62,6 +62,7 @@ alias my-refresh-firefox='CURR=$(xdotool getactivewindow); xdotool windowactivat
 alias dfh='df -h'
 alias dush='du -sh'
 alias tilos='mplayer http://stream.tilos.hu/tilos'
+alias watch='watch '
 
 # git
 alias 'gc!'='git commit -v --amend'
