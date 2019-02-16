@@ -61,6 +61,7 @@ alias scp='noglob scp'
 alias my-refresh-firefox='CURR=$(xdotool getactivewindow); xdotool windowactivate $(xdotool search --name "Mozilla Firefox" | tail -1); xdotool key F5; xdotool windowactivate $CURR'
 alias dfh='df -h'
 alias dush='du -sh'
+alias tilos='mplayer http://stream.tilos.hu/tilos'
 
 # git
 alias 'gc!'='git commit -v --amend'
@@ -196,4 +197,3 @@ if [[ -f ~/.aliases.local ]]
 then
     source ~/.aliases.local
 fi
-alias tilos='mplayer http://stream.tilos.hu/tilos'
