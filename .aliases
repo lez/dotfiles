@@ -63,6 +63,8 @@ alias dfh='df -h'
 alias dush='du -sh'
 alias tilos='mplayer http://stream.tilos.hu/tilos'
 alias watch='watch '
+alias dd='dd status=progress'
+alias sudo='sudo '
 
 # git
 alias 'gc!'='git commit -v --amend'
