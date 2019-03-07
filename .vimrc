@@ -24,7 +24,6 @@ set vb t_vb=
 set nobackup
 
 " do not put eol at the end of file if it's not already there
-set noeol
 set nofixeol
 
 " Make frequent typos work well
