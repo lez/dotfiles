@@ -52,6 +52,10 @@ function __ffexcludes {
     fi
 }
 
+function _f {
+    find . $(__ffexcludes) -name *$1* 2>/dev/null
+}
+
 function _ff {
     find . $(__ffexcludes) -name $1* 2>/dev/null
 }
