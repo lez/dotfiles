@@ -92,6 +92,14 @@ function vfff {
     vim $file
 }
 
+function rt {
+    ls -lrt $* | tail -3
+}
+
+function cdl {
+    cd $1; ls
+}
+
 # insert 'sudo ' at the beginning of the line
 function prepend-sudo {
   if [[ "$BUFFER" != su(do|)\ * ]]; then
