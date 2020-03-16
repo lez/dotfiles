@@ -67,7 +67,7 @@ alias dd='dd status=progress'
 alias sudo='sudo '
 alias vlc='vlc --play-and-exit'
 alias sss='systemctl suspend'
-alias fd='fd -a --no-ignore-vcs'
+alias fd='noglob fd -H --no-ignore-vcs'
 
 # git
 alias 'gc!'='git commit -v --amend'
