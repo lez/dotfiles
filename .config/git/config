@@ -9,3 +9,6 @@
     cor = checkout --recurse-submodules
     co = checkout
     cp = cherry-pick
+
+[stash]
+    showPatch = true
