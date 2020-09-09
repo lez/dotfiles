@@ -100,6 +100,12 @@ function cdl {
     cd $1; ls
 }
 
+# Set konsole title
+function ktitle {
+    _title="$1"
+    echo -ne "\e]30;$_title\a"
+}
+
 # insert 'sudo ' at the beginning of the line
 function prepend-sudo {
   if [[ "$BUFFER" != su(do|)\ * ]]; then
