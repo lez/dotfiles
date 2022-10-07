@@ -1,5 +1,6 @@
 [Timer]
-OnCalendar=*:0/1
+OnBootSec=1min
+OnUnitActiveSec=1min
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
