@@ -12,3 +12,5 @@
 
 [stash]
     showPatch = true
+[init]
+	defaultBranch = master
