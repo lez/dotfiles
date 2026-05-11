@@ -1,3 +1,8 @@
+function u2d {
+    #Unix time to date
+    unixtime=`echo $1 | tr -cd 0-9`
+    date -d "@$unixtime"
+}
 function v {
     local FILENAME_INPUT
     local VIM_FILENAME
@@ -104,6 +109,11 @@ function cdl {
 function ktitle {
     _title="$1"
     echo -ne "\e]30;$_title\a"
+}
+
+function wvlc {
+    waitfile $(basename $1 .part)
+    vlc --fullscreen $(basename $1 .part) $2 $3 $4 $5 $6 $7 $8 $9
 }
 
 # insert 'sudo ' at the beginning of the line

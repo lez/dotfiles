@@ -2,8 +2,8 @@
     spellcheck = false
 
 [user]
-    email = lez@github.com
-    name = Laszlo Megyer
+	email = nip5:lez@nostr.hu
+	name = Lez
 
 [alias]
     cor = checkout --recurse-submodules
@@ -14,3 +14,5 @@
     showPatch = true
 [init]
 	defaultBranch = master
+[push]
+	autoSetupRemote = true

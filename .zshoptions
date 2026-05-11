@@ -2,7 +2,7 @@
 setopt NOCORRECT NOCORRECTALL
 
 # export all variables automatically
-setopt ALLEXPORT
+#setopt ALLEXPORT  #BUGGY 
 
 # I want to write: $ #ls -l
 setopt interactivecomments
